@@ -1,0 +1,16 @@
+name: Auto TODO Issues
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  auto_todo:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Add TODO label
+      uses: actions/labeler@v2
+      with:
+        labels: "TODO"
